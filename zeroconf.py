@@ -935,6 +935,7 @@ class DNSOutgoing(object):
         name_suffices = ['.'.join(parts[i:]) for i in range(len(parts))]
 
         # look for an existing name or suffix
+        count = 0
         for count, sub_name in enumerate(name_suffices):
             if sub_name in self.names:
                 break
